@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "VS Code Quick Setup for Delicious Insights training classes",
   "scripts": {
-    "Setup VS Code": "npm install && node ./scripts/setup.js"
+    "setup-vs-code": "npm install && node ./scripts/setup.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,7 @@
   "homepage": "https://github.com/deliciousinsights/vscode-setup#readme",
   "devDependencies": {
     "chalk": "^2.3.0",
+    "inquirer": "^3.3.0",
     "json5": "^0.5.1"
   }
 }

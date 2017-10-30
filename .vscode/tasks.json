@@ -5,7 +5,7 @@
   "tasks": [
     {
       "type": "npm",
-      "script": "Setup VS Code",
+      "script": "setup-vs-code",
       "problemMatcher": []
     }
   ]
