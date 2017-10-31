@@ -91,12 +91,17 @@ function mergeSettings() {
     .replace(/^\{|\}$/g, '')
     .trim()
 
-  const newSettingsText = `{
-${userSettingsText},
+  const newSettingsText =
+    userSettingsText === ''
+      ? `{
+  ${referenceSettingsText}
+}`
+      : `{
+  ${userSettingsText},
 
-${BANNER}
+  ${BANNER.replace('%s', new Date().toISOString())}
 
-${referenceSettingsText}
+  ${referenceSettingsText}
 }`
 
   const backupPath = `${userSettingsPath}.bak`
