@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#! /usr/bin/env node
 
 // 1. Install recommended exts that are not there yet
 require('./install-recommended-exts')
