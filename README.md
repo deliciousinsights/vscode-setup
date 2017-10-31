@@ -4,9 +4,25 @@ Ce dépôt facilite la configuration aux petits oignons de Visual Studio Code po
 
 [Tous les détails sont ici](https://installations.delicious-insights.com/software/vscode.html#paramétrage--personnalisation), mais nous redonnons ci-dessous la procédure :
 
-Il te faudra de toutes façons [Node](https://installations.delicious-insights.com/software/node.html) et idéalement [Git](https://installations.delicious-insights.com/software/git.html) installés sur la machine (suis ces liens pour les installer au mieux, si besoin).
+Il te faudra de toutes façons [Node](https://installations.delicious-insights.com/software/node.html) installé sur la machine, avec **npm 5.2+** (suis ces liens pour les installer au mieux, si besoin).
 
-Voici comment :
+## À fond…
+
+Si tu as npm 5.2+ d’installé (ce qui est automatique à partir de Node 8.2.0 ; à défaut, fais `npm install -g npm`, éventuellement préfixé de `sudo` sur Linux ou OSX si besoin), y’a pas plus simple :
+
+```bash
+npx vscode-setup
+```
+
+Si tu avais déjà une ancienne version et que tu veux garantir la dernière, tu peux faire plutôt :
+
+```bash
+npx --ignore-existing vscode-setup
+```
+
+## À la main…
+
+C’est plus long mais bon, voici comment :
 
 1. Récupère ce dépôt
     - Soit à la main, si tu as Git installé : `git clone https://github.com/deliciousinsights/vscode-setup`
