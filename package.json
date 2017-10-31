@@ -1,6 +1,6 @@
 {
   "name": "vscode-setup",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "VS Code Quick Setup for Delicious Insights training classes",
   "scripts": {
     "setup-vs-code": "npm install && node ./scripts/setup.js"
@@ -10,9 +10,13 @@
     "type": "git",
     "url": "git+https://github.com/deliciousinsights/vscode-setup.git"
   },
-  "keywords": ["vscode", "code", "setup", "training"],
-  "author":
-    "Christophe Porteneuve <christophe@delicious-insights.com> (https://delicious-insights.com/)",
+  "keywords": [
+    "vscode",
+    "code",
+    "setup",
+    "training"
+  ],
+  "author": "Christophe Porteneuve <christophe@delicious-insights.com> (https://delicious-insights.com/)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/deliciousinsights/vscode-setup/issues"
