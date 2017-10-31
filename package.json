@@ -5,17 +5,14 @@
   "scripts": {
     "setup-vs-code": "npm install && node ./scripts/setup.js"
   },
+  "bin": "./scripts/setup.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/deliciousinsights/vscode-setup.git"
   },
-  "keywords": [
-    "vscode",
-    "code",
-    "setup",
-    "training"
-  ],
-  "author": "Christophe Porteneuve <christophe@delicious-insights.com> (https://delicious-insights.com/)",
+  "keywords": ["vscode", "code", "setup", "training"],
+  "author":
+    "Christophe Porteneuve <christophe@delicious-insights.com> (https://delicious-insights.com/)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/deliciousinsights/vscode-setup/issues"
