@@ -52,5 +52,18 @@
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
   },
-  "emmet.triggerExpansionOnTab": true
+  "emmet.triggerExpansionOnTab": true,
+
+  // TypeScript Hero (auto-imports & import sorting)
+  "typescriptHero.resolver.disableImportRemovalOnOrganize": true,
+  "typescriptHero.resolver.importGroups": [
+    "Modules",
+    "/material-ui/",
+    "Plains",
+    "Workspace"
+  ],
+  "typescriptHero.resolver.insertSemicolons": false,
+  "typescriptHero.resolver.multiLineWrapThreshold": 80,
+  "typescriptHero.resolver.organizeOnSave": true,
+  "typescriptHero.resolver.resolverMode": "ES6"
 }

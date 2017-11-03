@@ -36,6 +36,8 @@
     "jasonnutter.search-node-modules",
     // Subword navigation
     "ow.vscode-subword-navigation",
+    // TypeScript Hero
+    "rbbit.typescript-hero",
     // VSCode Great Icons
     "emmanuelbeziat.vscode-great-icons"
   ]
