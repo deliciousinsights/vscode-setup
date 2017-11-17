@@ -2,7 +2,7 @@ const chalk = require('chalk')
 const inquirer = require('inquirer')
 const os = require('os')
 const Path = require('path')
-const { readFileSync, writeFileSync } = require('fs')
+const { existsSync, readFileSync, writeFileSync } = require('fs')
 
 const BANNER = '// ===== VSCODE SETUP MERGED SETTINGS %s ====='
 const REF_MARKER = '"**/.vscode-setup-settings-merged": true'
@@ -28,9 +28,12 @@ async function askForConfirmation({ question, yes, no, defaultReply = true }) {
 }
 
 function checkForPreviousMerge() {
-  const userSettingsText = readFileSync(getUserSettingsPath(), {
-    encoding: 'utf-8',
-  })
+  const userSettingsPath = getUserSettingsPath()
+  const userSettingsText = existsSync(userSettingsPath)
+    ? readFileSync(userSettingsPath, {
+        encoding: 'utf-8',
+      })
+    : ''
   if (userSettingsText.includes(REF_MARKER)) {
     askForConfirmation({
       question:
@@ -78,9 +81,12 @@ function getUserSettingsPath() {
 
 function mergeSettings() {
   const userSettingsPath = getUserSettingsPath()
-  const userSettingsText = readFileSync(userSettingsPath, {
-    encoding: 'utf-8',
-  })
+  const userSettingsText = (existsSync(userSettingsPath)
+    ? readFileSync(userSettingsPath, {
+        encoding: 'utf-8',
+      })
+    : ''
+  )
     .trim()
     .replace(/^\{|\}$/g, '')
     .trim()
@@ -104,17 +110,23 @@ function mergeSettings() {
   ${referenceSettingsText}
 }`
 
-  const backupPath = `${userSettingsPath}.bak`
-  const baseBackupPath = Path.basename(backupPath)
-  writeFileSync(backupPath, userSettingsText, {
-    encoding: 'utf-8',
-  })
+  if (userSettingsText !== '') {
+    const backupPath = `${userSettingsPath}.bak`
+    const baseBackupPath = Path.basename(backupPath)
+    writeFileSync(backupPath, userSettingsText, {
+      encoding: 'utf-8',
+    })
+  }
   writeFileSync(userSettingsPath, newSettingsText, {
     encoding: 'utf-8',
   })
 
   console.info(chalk.green('✔︎ Successfully merged settings.'))
-  console.info(
-    chalk.gray.dim(`(former User Settings were backed up to ${baseBackupPath})`)
-  )
+  if (userSettingsText !== '') {
+    console.info(
+      chalk.gray.dim(
+        `(former User Settings were backed up to ${baseBackupPath})`
+      )
+    )
+  }
 }
