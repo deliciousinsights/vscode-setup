@@ -28,12 +28,7 @@ async function askForConfirmation({ question, yes, no, defaultReply = true }) {
 }
 
 function checkForPreviousMerge() {
-  const userSettingsPath = getUserSettingsPath()
-  const userSettingsText = existsSync(userSettingsPath)
-    ? readFileSync(userSettingsPath, {
-        encoding: 'utf-8',
-      })
-    : ''
+  const userSettingsText = getSettingsText(getUserSettingsPath())
   if (userSettingsText.includes(REF_MARKER)) {
     askForConfirmation({
       question:
@@ -56,6 +51,16 @@ function getReferenceSettingsPath() {
   return Path.resolve(__dirname, '../.vscode/settings.json')
 }
 
+function getSettingsText(path) {
+  const base = existsSync(path)
+    ? readFileSync(path, { encoding: 'utf-8' })
+    : '{}'
+  return base
+    .trim()
+    .replace(/^\{|\}$/g, '')
+    .trim()
+}
+
 function getUserSettingsPath() {
   const platform = os.platform()
   let path = null
@@ -63,8 +68,9 @@ function getUserSettingsPath() {
   // See https://code.visualstudio.com/docs/getstarted/settings for reference.
   switch (platform) {
     case 'darwin':
-      path = `${process.env
-        .HOME}/Library/Application Support/Code/User/settings.json`
+      path = `${
+        process.env.HOME
+      }/Library/Application Support/Code/User/settings.json`
       break
     case 'win32':
       path = `${process.env.APPDATA}/Code/User/settings.json`
@@ -81,21 +87,8 @@ function getUserSettingsPath() {
 
 function mergeSettings() {
   const userSettingsPath = getUserSettingsPath()
-  const userSettingsText = (existsSync(userSettingsPath)
-    ? readFileSync(userSettingsPath, {
-        encoding: 'utf-8',
-      })
-    : ''
-  )
-    .trim()
-    .replace(/^\{|\}$/g, '')
-    .trim()
-  const referenceSettingsText = readFileSync(getReferenceSettingsPath(), {
-    encoding: 'utf-8',
-  })
-    .trim()
-    .replace(/^\{|\}$/g, '')
-    .trim()
+  const userSettingsText = getSettingsText(userSettingsPath)
+  const referenceSettingsText = getSettingsText(getReferenceSettingsPath())
 
   const newSettingsText =
     userSettingsText === ''
