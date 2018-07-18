@@ -23,8 +23,8 @@
   },
   "homepage": "https://github.com/deliciousinsights/vscode-setup#readme",
   "dependencies": {
-    "chalk": "^2.3.0",
-    "inquirer": "^3.3.0",
-    "json5": "^0.5.1"
+    "chalk": "^2.4.1",
+    "inquirer": "^6.0.0",
+    "json5": "^1.0.1"
   }
 }

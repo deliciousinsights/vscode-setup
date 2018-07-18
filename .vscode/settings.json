@@ -1,27 +1,36 @@
 {
-  // Nicer debugging (experimental)
+  // Nicer debugging
   "debug.inlineValues": true,
+
+  // Whitespace shouldn't pollute diffs (git diff -w)
+  "diffEditor.ignoreTrimWhitespace": true,
 
   // Font and spacing (even w/o Prettier/ESLint)
   "editor.fontFamily":
     "'Operator Mono SSm', 'Source Code Pro', Monaco, Menlo, Consolas, 'Droid Sans Mono', Inconsolata, 'Courier New', monospace",
-  "editor.insertSpaces": true,
-  "editor.minimap.enabled": false,
-  "editor.multiCursorModifier": "alt",
-  "editor.scrollBeyondLastLine": false,
-  "editor.snippetSuggestions": "top",
+  // For Prettier et al.
+  "editor.formatOnSave": true,
+  // Indent with 2 spaces!
   "editor.tabSize": 2,
-  "files.insertFinalNewline": true,
-  "files.trimTrailingWhitespace": true,
+  "editor.insertSpaces": true,
+  // Minimaps are useless
+  "editor.minimap.enabled": false,
+  // Alt for click-based multi-cursor
+  "editor.multiCursorModifier": "alt",
+  // Don't sroll pass the last line
+  "editor.scrollBeyondLastLine": false,
+  // Snippets should appear above IntelliSense
+  "editor.snippetSuggestions": "top",
+  // A slightly fatter cursor is more visible
+  "editor.cursorWidth": 3,
+  // Word wrapping is usually best by default
+  "editor.wordWrap": "on",
 
   // Hide Open Editors pane
   "explorer.openEditors.visible": 0,
 
-  // Disable Preview when using Quick Open
-  "workbench.editor.enablePreviewFromQuickOpen": false,
-
-  // Use cool icon theme
-  "workbench.iconTheme": "vscode-great-icons",
+  // Open any new buffer as Markdown. Super handy.
+  "files.defaultLanguage": "markdown",
 
   // `.snap` files (Jest snapshots) should use JSX mode by default
   "files.associations": {
@@ -36,34 +45,47 @@
     "**/.vscode-setup-settings-merged": true
   },
 
-  // Prettier & ESLint
-  "prettier.eslintIntegration": true,
-  "prettier.singleQuote": true,
-  "prettier.trailingComma": "es5",
-  "prettier.semi": false,
-  "editor.formatOnSave": true,
-  "javascript.format.enable": false,
+  // Make diffs easier, whitespace-wise
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+
+  // Only search case sensitivively for patterns that are
+  // not 100% lowercase
+  "search.smartCase": true,
+
+  // Fat scrollbacks are more useful
+  "terminal.integrated.scrollback": 100000,
+
+  // Disable Preview when using Quick Open
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+
+  // Show tabs again, dammit!
+  "workbench.editor.showTabs": true,
+
+  // Use cool icon theme
+  "workbench.iconTheme": "vscode-great-icons",
+
+  // Make the current tab stand out better
+  "workbench.colorCustomizations": {
+    "tab.activeBackground": "#08c"
+  },
+
+  // Emmet
+  "emmet.includeLanguages": {
+    "javascriptreact": "javascript"
+  },
+  "emmet.triggerExpansionOnTab": true,
 
   // Flow
   "flow.useNPMPackagedFlow": true,
   "javascript.validate.enable": false,
 
-  // Emmet
-  "emmet.includeLanguages": {
-    "javascript": "javascriptreact"
-  },
-  "emmet.triggerExpansionOnTab": true,
+  "markdown.extension.toc.githubCompatibility": true,
 
-  // TypeScript Hero (auto-imports & import sorting)
-  "typescriptHero.resolver.disableImportRemovalOnOrganize": true,
-  "typescriptHero.resolver.importGroups": [
-    "Modules",
-    "/material-ui/",
-    "Plains",
-    "Workspace"
-  ],
-  "typescriptHero.resolver.insertSemicolons": false,
-  "typescriptHero.resolver.multiLineWrapThreshold": 80,
-  "typescriptHero.resolver.organizeOnSave": true,
-  "typescriptHero.resolver.resolverMode": "ES6"
+  // Prettier & ESLint
+  "prettier.eslintIntegration": true,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "es5",
+  "prettier.semi": false,
+  "javascript.format.enable": false
 }

@@ -8,16 +8,28 @@
     "formulahendry.auto-close-tag",
     // Auto Rename Tag
     "formulahendry.auto-rename-tag",
+    // Bookmarks
+    "alefragnani.bookmarks",
     // Debugger for Chrome
     "msjsdiag.debugger-for-chrome",
+    // DotENV
+    "mikestead.dotenv",
     // ECMAScript Quotes Transformer
     "vilicvane.es-quotes",
     // ESLint
     "dbaeumer.vscode-eslint",
+    // Flow Language Support
+    "flowtype.flow-for-vscode",
+    // GitHub
+    "knisterpeter.vscode-github",
     // JavaScript (ES6) code snippets
     "xabikos.javascriptsnippets",
     // language-stylus
     "sysoev.language-stylus",
+    // Markdown All in One
+    "yzhang.markdown-all-in-one",
+    // Markdown Preview gitHub Styling
+    "bierner.markdown",
     // markdownlint
     "DavidAnson.vscode-markdownlint",
     // nbsp-vscode
@@ -26,14 +38,18 @@
     "eg2.vscode-npm-script",
     // Path Intellisense
     "christian-kohler.path-intellisense",
-    // Prettier - JavaScript formatter
+    // Prettier - Code formatter
     "esbenp.prettier-vscode",
+    // Quokka.js
+    "wallabyjs.quokka-vscode",
     // Reactjs code snippets
     "xabikos.reactsnippets",
     // REST Client
     "humao.rest-client",
     // Search node_modules
     "jasonnutter.search-node-modules",
+    // Sort lines
+    "tyriar.sort-lines",
     // Subword navigation
     "ow.vscode-subword-navigation",
     // TypeScript Hero
