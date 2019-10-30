@@ -68,9 +68,7 @@ function getUserSettingsPath() {
   // See https://code.visualstudio.com/docs/getstarted/settings for reference.
   switch (platform) {
     case 'darwin':
-      path = `${
-        process.env.HOME
-      }/Library/Application Support/Code/User/settings.json`
+      path = `${process.env.HOME}/Library/Application Support/Code/User/settings.json`
       break
     case 'win32':
       path = `${process.env.APPDATA}/Code/User/settings.json`
@@ -103,9 +101,9 @@ function mergeSettings() {
   ${referenceSettingsText}
 }`
 
+  const backupPath = `${userSettingsPath}.bak`
+  const baseBackupPath = Path.basename(backupPath)
   if (userSettingsText !== '') {
-    const backupPath = `${userSettingsPath}.bak`
-    const baseBackupPath = Path.basename(backupPath)
     writeFileSync(backupPath, userSettingsText, {
       encoding: 'utf-8',
     })
