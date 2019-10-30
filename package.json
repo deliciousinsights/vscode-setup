@@ -1,6 +1,6 @@
 {
   "name": "vscode-setup",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "VS Code Quick Setup for Delicious Insights training classes",
   "scripts": {
     "setup-vs-code": "npm install && node ./scripts/setup.js"
