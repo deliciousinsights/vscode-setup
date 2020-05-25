@@ -6,8 +6,7 @@
   "diffEditor.ignoreTrimWhitespace": true,
 
   // Font and spacing (even w/o Prettier/ESLint)
-  "editor.fontFamily":
-    "'Operator Mono SSm', 'Source Code Pro', Monaco, Menlo, Consolas, 'Droid Sans Mono', Inconsolata, 'Courier New', monospace",
+  "editor.fontFamily": "'Operator Mono SSm', 'Source Code Pro', Monaco, Menlo, Consolas, 'Droid Sans Mono', Inconsolata, 'Courier New', monospace",
   // For Prettier et al.
   "editor.formatOnSave": true,
   // Indent with 2 spaces!
@@ -76,16 +75,13 @@
   },
   "emmet.triggerExpansionOnTab": true,
 
-  // Flow
-  "flow.useNPMPackagedFlow": true,
-  "javascript.validate.enable": false,
-
   "markdown.extension.toc.githubCompatibility": true,
 
   // Prettier & ESLint
-  "prettier.eslintIntegration": true,
-  "prettier.singleQuote": true,
-  "prettier.trailingComma": "es5",
+  "javascript.format.enable": false,
+  "prettier.arrowParens": "always",
+  "prettier.jsxSingleQuote": true,
   "prettier.semi": false,
-  "javascript.format.enable": false
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "es5"
 }

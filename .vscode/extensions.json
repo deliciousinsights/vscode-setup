@@ -6,10 +6,10 @@
     "patbenatar.advanced-new-file",
     // Auto Close Tag
     "formulahendry.auto-close-tag",
-    // Auto Rename Tag
-    "formulahendry.auto-rename-tag",
     // Bookmarks
     "alefragnani.bookmarks",
+    // change-case
+    "wmaurer.change-case",
     // Debugger for Chrome
     "msjsdiag.debugger-for-chrome",
     // DotENV
@@ -18,18 +18,20 @@
     "vilicvane.es-quotes",
     // ESLint
     "dbaeumer.vscode-eslint",
-    // Flow Language Support
-    "flowtype.flow-for-vscode",
+    // French Language Pack for VS Code
+    "ms-ceintl.vscode-language-pack-fr",
     // GitHub
     "knisterpeter.vscode-github",
+    // GitHub Pull Requests and Issues"
+    "github.vscode-pull-request-github",
+    // GitLens
+    "eamodio.gitlens",
     // JavaScript (ES6) code snippets
     "xabikos.javascriptsnippets",
-    // language-stylus
-    "sysoev.language-stylus",
     // Markdown All in One
     "yzhang.markdown-all-in-one",
-    // Markdown Preview gitHub Styling
-    "bierner.markdown",
+    // Markdown Preview GitHub Styling
+    "bierner.markdown-preview-github-styles",
     // markdownlint
     "DavidAnson.vscode-markdownlint",
     // nbsp-vscode
@@ -46,14 +48,18 @@
     "xabikos.reactsnippets",
     // REST Client
     "humao.rest-client",
+    // Rewrap
+    "stkb.rewrap",
     // Search node_modules
     "jasonnutter.search-node-modules",
     // Sort lines
     "tyriar.sort-lines",
+    // sort-imports
+    "amatiasq.sort-imports",
     // Subword navigation
     "ow.vscode-subword-navigation",
-    // TypeScript Hero
-    "rbbit.typescript-hero",
+    // Visual Studio IntelliCode
+    "visualstudioexptteam.vscodeintellicode",
     // VSCode Great Icons
     "emmanuelbeziat.vscode-great-icons"
   ]
